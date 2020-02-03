@@ -187,22 +187,13 @@ public class Result  {
         if (o == null || getClass() != o.getClass()) return false;
         Result result = (Result) o;
         return id.equals(result.id) &&
-                type.equals(result.type) &&
-                sectionId.equals(result.sectionId) &&
-                sectionName.equals(result.sectionName) &&
-                webPublicationDate.equals(result.webPublicationDate) &&
-                webTitle.equals(result.webTitle) &&
-                webUrl.equals(result.webUrl) &&
-                apiUrl.equals(result.apiUrl) &&
-                fields.equals(result.fields) &&
-                isHosted.equals(result.isHosted) &&
-                pillarId.equals(result.pillarId) &&
-                pillarName.equals(result.pillarName);
+                Objects.equals(pillarId, result.pillarId) &&
+                Objects.equals(pillarName, result.pillarName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, type, sectionId, sectionName, webPublicationDate, webTitle, webUrl, apiUrl, fields, isHosted, pillarId, pillarName);
+        return Objects.hash(id);
     }
 
     @Override

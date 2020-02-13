@@ -56,4 +56,9 @@ dependencies {
 
     implementation "androidx.cardview:cardview:$cardview_version"
 
+
+    // Push nootification
+    compile 'me.pushy:sdk:1.0.54'
+
+
 }
